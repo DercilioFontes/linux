@@ -31,3 +31,15 @@
 - `D` to go to the initial menu
 
 - Use `Q` to exit
+
+## `joe`
+
+- Use `Ctrl + KH` for help
+
+- Use `Ctrl + T + SPACE` to toogle between `I`nsert or `O`vertype mode
+
+- Use `Ctrl + Shift + -` to undo
+
+- Use `Ctrl + K + X` to save and exit
+
+- Use `Ctrl + C` and cofirm with `y` to exit without saving
