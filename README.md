@@ -97,3 +97,9 @@
 - It displays the last ten lines of a file.
 
 - `tail -<n> <filename>`. n: number of lines
+
+## `sort`
+
+- `sort <filename>`
+
+- It displays the contents of a file in order by line.
