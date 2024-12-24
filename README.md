@@ -103,3 +103,11 @@
 - `sort <filename>`
 
 - It displays the contents of a file in order by line.
+
+## `uniq` (unique)
+
+- `uniq <filename>`
+
+- It display a file, skkiping adjacent duplicate lines.
+
+- `sort <filename> | uniq` --> Sorted before processed by `uniq`, ensures that no two lines are the same.
