@@ -74,8 +74,18 @@
 
 ## `grep` (global regular expression print)
 
-- `grep <text> <filename>`
+- `grep <word> <filename>`
 
-- `grep '<text1> <text2>' <filename>`
+- `grep '<word> <word>' <filename>`
 
 - It searches for the text and displays each line that has it
+
+- It accepts more the one file
+
+## `head`
+
+- `head <filename>`
+
+- It displays the first ten lines of a file.
+
+- `head -<n> <filename>`. n: number of lines
