@@ -123,3 +123,9 @@
 - `file <filename>`
 
 - It determines file type.
+
+## `echo`
+
+- `echo <text>`
+
+- It display the text on terminal.
