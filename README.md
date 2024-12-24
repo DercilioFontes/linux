@@ -53,3 +53,9 @@
 - Use `B` to go back (`less`)
 
 - Use `Q` to exit
+
+## Quoting/Scaping Characters
+
+- To quote, or scape, a character precede it with a backslash (`\`)
+
+- Another way is to enclose them between single quotation marks (`'**'`)
