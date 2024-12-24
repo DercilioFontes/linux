@@ -59,3 +59,9 @@
 - To quote, or scape, a character precede it with a backslash (`\`)
 
 - Another way is to enclose them between single quotation marks (`'**'`)
+
+## `cp`
+
+- `cp source-file destination-file`
+
+- Caution: If `destination-file` exists before, `cp` overwrites it. It is good idea to use `-i` or `--interactive` option. It checks with you before overwrites a file.
