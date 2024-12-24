@@ -161,3 +161,19 @@
 - It display the file content decompressed but keeps it compressed.
 
 Note: Do not confuse `gzip` and `gunzip` with `zip` and `unzip`. These are used to pack and unpack zip files containing several files compressed into a single file.
+
+## `tar` (tape archive)
+
+- It original function was to create and read archive tapes. Today it is used to create single files that, when unpacked, create a directory with any level of subdirectories and subfiles beneath it.
+
+- Often the `tar` files are compressed with `gzip`, and has filename extension `.tar.gz` or `.tgz`
+
+- Creating a tar file: `tar cvf <name_of_archive>.tar <dirname>/`
+
+- Creating a tarball (gzipped) file: `tar cvzf <name_of_archive>.tar.gz <dirname>/`
+
+- Separating a tar file into component files: `tar xvf <name_of_archive>.tar(.gz) -c <dirname>/`
+
+Note: You don’t need to specify the directory name while separating a tar file into its component files. You can specify the directory name if you want to extract the tar file to directory other than the current one.
+
+- <https://blog.udemy.com/tar-command-in-linux>
