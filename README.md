@@ -129,3 +129,9 @@
 - `echo <text>`
 
 - It display the text on terminal.
+
+## `date`
+
+- `date` --> Tue Dec 24 21:55:08 UTC 2024
+
+- It display the time and date on terminal.
