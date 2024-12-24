@@ -117,3 +117,9 @@
 - `diff <filename1> <filename2>`
 
 - It compares two files and displays a list of the difference between them.
+
+## `file`
+
+- `file <filename>`
+
+- It determines file type.
