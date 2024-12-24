@@ -89,3 +89,11 @@
 - It displays the first ten lines of a file.
 
 - `head -<n> <filename>`. n: number of lines
+
+## `tail`
+
+- `tail <filename>`
+
+- It displays the last ten lines of a file.
+
+- `tail -<n> <filename>`. n: number of lines
