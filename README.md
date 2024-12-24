@@ -65,3 +65,9 @@
 - `cp source-file destination-file`
 
 - Caution: If `destination-file` exists before, `cp` overwrites it. It is good idea to use `-i` or `--interactive` option. It checks with you before overwrites a file.
+
+## `mv`
+
+- `mv existing-filename new-filename`
+
+- If you want to rename a file without making a duplicate copy of it, you can use `mv`
