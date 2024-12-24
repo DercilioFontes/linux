@@ -111,3 +111,9 @@
 - It display a file, skkiping adjacent duplicate lines.
 
 - `sort <filename> | uniq` --> Sorted before processed by `uniq`, ensures that no two lines are the same.
+
+## `diff`
+
+- `diff <filename1> <filename2>`
+
+- It compares two files and displays a list of the difference between them.
