@@ -135,3 +135,29 @@
 - `date` --> Tue Dec 24 21:55:08 UTC 2024
 
 - It display the time and date on terminal.
+
+## `ls` (list files)
+
+- `ls -l`: show more info about files.
+
+## `gzip`
+
+- `gzip <filename>`
+
+- It compresses a file
+
+- `-v` or `--verbose` option reports how much is was able to compress.
+
+## `gunzip`
+
+- `gunzip <filename>.gz`
+
+- It decompresses a file
+
+## `zcat`
+
+- `zcat <filename>.gz`
+
+- It display the file content decompressed but keeps it compressed.
+
+Note: Do not confuse `gzip` and `gunzip` with `zip` and `unzip`. These are used to pack and unpack zip files containing several files compressed into a single file.
