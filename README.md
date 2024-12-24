@@ -43,3 +43,13 @@
 - Use `Ctrl + K + X` to save and exit
 
 - Use `Ctrl + C` and cofirm with `y` to exit without saving
+
+## `cat`, `less` and `more`
+
+- To show a file
+
+- Use `SPACE` bar to go to another page
+
+- Use `B` to go back (`less`)
+
+- Use `Q` to exit
