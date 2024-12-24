@@ -71,3 +71,11 @@
 - `mv existing-filename new-filename`
 
 - If you want to rename a file without making a duplicate copy of it, you can use `mv`
+
+## `grep` (global regular expression print)
+
+- `grep <text> <filename>`
+
+- `grep '<text1> <text2>' <filename>`
+
+- It searches for the text and displays each line that has it
