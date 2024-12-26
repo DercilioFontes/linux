@@ -303,3 +303,9 @@ Note: You don’t need to specify the directory name while separating a tar file
 - In addition to `a` (for _all_) and `o` (for _other_), you can use `g` (for _group_) and `u` (for _user_, although user actually refers to the owner of the file, who may or may not be the user of the file at any given time)
 
 - Note: The user who knows the `root` password can log in as **Superuser** and have full access to _all_ files, regardless of owner or access permissions.
+
+## Directory access permissions
+
+- Access permissions have a slightly different meanings when used with directory. Execute access permission is redefined for a directory. It means you can search through the directory. It has nothing to do with executing a file.
+
+- `chmod a+rwx <dir>`
