@@ -146,9 +146,9 @@
 
 ## `ls` (list files)
 
-- `ls -l`: show more info about files.
+- `ls -l`: (long) show more info about files.
 
-- `ls -a`: displays _all files_, even invisible ones.
+- `ls -a`: (all) displays _all files_, even invisible ones.
 
 ## `gzip`
 
@@ -273,3 +273,21 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `~/` --> at the start of a pathname denote your home directory
 
 - `~<user>/` --> A tilde followed by a login name denotes that's user home directory.
+
+## Access permissions
+
+- Three types of users can access a file:
+
+  - the owner of the file (_owner_)
+  - a member of a group to which the owner belongs (_group_)
+  - everyone else (_other_)
+
+- A user can attempt to access a ordinany file in three ways, by trying to:
+
+  - _read from_
+  - _write to_
+  - _execute it_
+
+- Three types of users, each able to access a file in three ways, equal to a total of _nine possible_ ways to access a ordinary file.
+
+- `ls -l` --> `drwxr-xr-x   2 root root 4096 Apr 22  2024 boot`
