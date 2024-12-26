@@ -291,3 +291,15 @@ Note: You don’t need to specify the directory name while separating a tar file
 - Three types of users, each able to access a file in three ways, equal to a total of _nine possible_ ways to access a ordinary file.
 
 - `ls -l` --> `drwxr-xr-x   2 root root 4096 Apr 22  2024 boot`
+
+## Changing access permissions
+
+- The owner of a file controls which users have permission to access the file and how they can access it.
+
+- `chmod` (change mode)
+  - `chmod a+rw <filename>` --> adds (+) read and write (rw) for all users
+  - `chmod o-rx <filename>` --> removes (-) read and execute (rx) permissions for other (o) users
+
+- In addition to `a` (for _all_) and `o` (for _other_), you can use `g` (for _group_) and `u` (for _user_, although user actually refers to the owner of the file, who may or may not be the user of the file at any given time)
+
+- Note: The user who knows the `root` password can log in as **Superuser** and have full access to _all_ files, regardless of owner or access permissions.
