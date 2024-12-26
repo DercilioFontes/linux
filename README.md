@@ -195,3 +195,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `apropos sort` --> `man -k sort` (-k: keyword)
 
 - It lists the short description lines for all man pages that contain the keyword somewhere in the header line.
+
+## `who`, `whoami`, `w` and `finger`
+
+- For obtaining users and system information
