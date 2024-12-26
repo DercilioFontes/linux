@@ -223,3 +223,9 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `mkdir /home/dafdev/docs`
 
 - It creates a directory.
+
+## `pwd` (print working directory)
+
+- `pwd`
+
+- It displays the pathname or the working directory.
