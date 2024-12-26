@@ -224,6 +224,20 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - It creates a directory.
 
+## `rmdir`
+
+- `rmdir /home/dafdev/docs`
+
+- It removes a directory.
+
+- You cannot delete the working directory or a directory that contains entries other than `.` and `..`.
+
+- If you need to delete a directory with files in it, first delete the files using `rm` and then delete the directory.
+
+- `rm -r <directory>` --> recursively deletes the files (and other subdirectories) whithin a directory and also deletes teh directory itself.
+
+- **Caution**: You must use it carefully. It is quite easy to wipe out your home directory with a single, short command.
+
 ## `pwd` (print working directory)
 
 - `pwd`
