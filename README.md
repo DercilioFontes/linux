@@ -199,3 +199,11 @@ Note: You don’t need to specify the directory name while separating a tar file
 ## `who`, `whoami`, `w` and `finger`
 
 - For obtaining users and system information
+
+## `write`, `talk`, and `pine` (email)
+
+- For communication with other users
+
+- `mesg n` --> to disable messages
+
+- `mesg y` --> to enable
