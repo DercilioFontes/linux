@@ -189,3 +189,9 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `whereis` looks in a few standard locations instead of using your search path. It also find any `man` pages for the command.
 
 - `type` also shows if the command is a shell builtin or its pathname.
+
+## `apropos`
+
+- `apropos sort` --> `man -k sort` (-k: keyword)
+
+- It lists the short description lines for all man pages that contain the keyword somewhere in the header line.
