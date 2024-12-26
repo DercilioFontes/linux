@@ -229,3 +229,19 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `pwd`
 
 - It displays the pathname or the working directory.
+
+- When you first log in on a Linux system, the working directory is your _home directory_.
+
+## Startup files
+
+- The shell executes the commands in this file each time you log in.
+
+- `bash` --> `.profile`
+
+- `zsh` --> `zprifile`
+
+## `cd` (change directory)
+
+- `cd var/log`
+
+- Without an argument, `cd` makes your home directory the working directory, as it was when you first logged in.
