@@ -207,3 +207,11 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `mesg n` --> to disable messages
 
 - `mesg y` --> to enable
+
+## Invisible file/directory
+
+- `.dockerenv` / `.git`
+
+- A filename that begins with a period is called _invisible file_ because `ls` does not display it.
+
+- The command `ls -a` displays _all files_, even invisible ones.
