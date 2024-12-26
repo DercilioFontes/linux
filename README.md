@@ -177,3 +177,15 @@ Note: Do not confuse `gzip` and `gunzip` with `zip` and `unzip`. These are used 
 Note: You don’t need to specify the directory name while separating a tar file into its component files. You can specify the directory name if you want to extract the tar file to directory other than the current one.
 
 - <https://blog.udemy.com/tar-command-in-linux>
+
+## `which`, `whereis` and `type`
+
+- Helps to locate commands by giving its pathname to the file for the command.
+
+- When you type the name of a command, the shell searches for the command in your search path and runs the first one it finds.
+
+- `which` finds which copy of the program the shell runs.
+
+- `whereis` looks in a few standard locations instead of using your search path. It also find any `man` pages for the command.
+
+- `type` also shows if the command is a shell builtin or its pathname.
