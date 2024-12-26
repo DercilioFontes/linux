@@ -54,7 +54,7 @@
 
 - Use `Q` to exit
 
-## Quoting/Scaping Characters
+## Quoting/Scaping characters
 
 - To quote, or scape, a character precede it with a backslash (`\`)
 
@@ -71,6 +71,14 @@
 - `mv existing-filename new-filename`
 
 - If you want to rename a file without making a duplicate copy of it, you can use `mv`
+
+- `mv existing-file-list directory`
+
+- Moves a file or files to a new directory.
+
+- `mv existing-directory-list directory`
+
+- Moves a directory or directories to a new directory.
 
 ## `grep` (global regular expression print)
 
@@ -259,3 +267,9 @@ Note: You don’t need to specify the directory name while separating a tar file
 - `cd var/log`
 
 - Without an argument, `cd` makes your home directory the working directory, as it was when you first logged in.
+
+## Special pathnames
+
+- `~/` --> at the start of a pathname denote your home directory
+
+- `~<user>/` --> A tilde followed by a login name denotes that's user home directory.
