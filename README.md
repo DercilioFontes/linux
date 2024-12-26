@@ -140,6 +140,8 @@
 
 - `ls -l`: show more info about files.
 
+- `ls -a`: displays _all files_, even invisible ones.
+
 ## `gzip`
 
 - `gzip <filename>`
@@ -215,3 +217,9 @@ Note: You don’t need to specify the directory name while separating a tar file
 - A filename that begins with a period is called _invisible file_ because `ls` does not display it.
 
 - The command `ls -a` displays _all files_, even invisible ones.
+
+## `mkdir`
+
+- `mkdir /home/dafdev/docs`
+
+- It creates a directory.
