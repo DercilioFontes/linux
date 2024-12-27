@@ -357,3 +357,23 @@ Note: You don’t need to specify the directory name while separating a tar file
 - The `dev/null` device, commonly called a bit-bucket, is a place you can redirect output that you do not want.
 
 - `echo "hi there" > /dev/null`
+
+## Pipes (`|`)
+
+- The shell uses a _pipe_ to connect standard output of one command directly to standard input of another command.
+
+- `command_a [arguments] | command_b [arguments]`
+
+## Filters
+
+- A _filter_ is a command that processes an input stream of data to produce an output stream of data.
+
+- In the following example `sort` is a filter.
+
+- `who | sort | lpr`
+
+## `tee`
+
+- You can use the `tee` utility in a pipe to send the output of a command to a file while also sending the output to standard output.
+
+- `who | tee who.out | grep scott`
