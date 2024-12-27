@@ -469,3 +469,9 @@ ff02::2 ip6-allrouters
 - A common convention for the format of network addresses: `user@host` (often read as _user at host_). When you use an `@` sign in an argument to a command, the utility interprets the text that follows as the name of a remote host computer. When it does not include an `@` sign or hostname, it assumes requesting from a local host.
 
 - To identify the computer you are using, run `hostname`
+
+## `rcp` (remote copy) and `ftp` (file transfer protocol)
+
+- `rcp memo.921 bravo:memos/memo.921`: bravo is a remote system
+
+- `ftp` is interactive.
