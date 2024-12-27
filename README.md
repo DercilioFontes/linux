@@ -400,3 +400,37 @@ root@500cb9f8dd75:/#
 - If you forget the PID number, you can use `ps` (process status) utility to display it.
 
 - If you forget the job number, you can use the `jobs` builtin to determine the job number of the background job.
+
+## Filename generation / pathname expansion
+
+- _metacharacters_ / _wildcards_ --> characters that have a special meaning to the shell.
+
+- When one of these special characters appears in an argument on the command line, the shell expands that argument into a list of filenames and passes the list to the program that the command line calls.
+
+- Filenames that contain these special caharacters are called _ambiguous file references_ because they do not refer to any one specific file.
+
+- The process that the shell performs on these filenames is called _pathname expansion_ or _globbing_.
+
+### `?`
+
+- It matches any single character in the name of a existing file.
+
+- `ls memo?` --> matches `memo5`, `memo9`, `memoa`, `memos`
+
+### `*`
+
+- The asterisk performs a function similar to that of the question mark, except that it matches any number of characters, _including zero characters_, in a filename.
+
+- `ls s*`, `ls *.txt`
+
+### `[]`
+
+- A pair of square brackets surrounding a list of characters causes the shell to match filenames containing the individual characters.
+
+- Each character-class definition can replace only a single character, _one at a time_, within a filename.
+
+- `cat page[2468].txt` --> `page2.txt`, `page4.txt`, `page6.txt` and `page8.txt`
+
+- A hyphen defines a range of characters.
+
+- `cat page[6-9].txt` --> `page6.txt`, `page7.txt`, `page8.txt` and `page9.txt`
