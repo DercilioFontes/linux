@@ -327,3 +327,33 @@ Note: You don’t need to specify the directory name while separating a tar file
 - The Linux system has an additional type of file, a _device file_. A device file resides in the Linux file structure, usually in the `/dev` directory, and representes a peripheral device such as a terminal, printer or disk drive.
 
 - The command `tty` displays the name of the terminal you give the command from.
+
+## Redirecting standard output (`>`)
+
+- `command [arguments] > filename`
+
+- It instructs the shell to redirect a command's output to the specified file instead of to the terminal.
+
+- `cat file1 file2 > file3` --> it redirects file1 and file2 output to _catenate_ (join one after the other) several files into one larger file.
+
+## Redirecting standard input (`<`)
+
+- `command [arguments] < filename`
+
+- It instructs the shell to redirect a command's input from the specific file instead of the terminal.
+
+- Note: A feature called `noclobber` (in `bash`), `NO_CLOBBER` (in `zsh`), stops you from inadvertenlty orverwriting an existing file using redirection.
+
+## Appending starndard output to a file (`>>`)
+
+- `cat pear >> orange`
+
+- It causes the shell to add the new information to the end of the file, leaving intact any information that was already there. It is a convenient way of catenating two files into one.
+
+- Be careful to include both _greater-than_ signs.
+
+## Using `/dev/null`
+
+- The `dev/null` device, commonly called a bit-bucket, is a place you can redirect output that you do not want.
+
+- `echo "hi there" > /dev/null`
