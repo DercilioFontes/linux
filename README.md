@@ -364,6 +364,8 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - `command_a [arguments] | command_b [arguments]`
 
+- You can use `-` to represent standard input when needed. Example: `cat memos.new | diff - memo.draft`
+
 ## Filters
 
 - A _filter_ is a command that processes an input stream of data to produce an output stream of data.
