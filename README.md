@@ -477,3 +477,7 @@ ff02::2 ip6-allrouters
 - `rcp memo.921 bravo:memos/memo.921`: bravo is a remote system
 
 - `ftp` is interactive.
+
+## `ping`
+
+- The `ping` utility sends a particular kind of IP data packet to a remote computer that causes the remote system to send back a reply. This is a quick way to verify that a remote system is available, as well as to check how well the network is operating.
