@@ -309,3 +309,21 @@ Note: You don’t need to specify the directory name while separating a tar file
 - Access permissions have a slightly different meanings when used with directory. Execute access permission is redefined for a directory. It means you can search through the directory. It has nothing to do with executing a file.
 
 - `chmod a+rwx <dir>`
+
+## Links
+
+- `ln` (link): creates an additional link to an existing file.
+
+- `ln exisiting-file new-link`
+
+- The `ln` utility creates am additional pointer to an existing file. It does not make another copy of the file. The file status information is the same for all links. Only the filenames differ.
+
+## `df`
+
+- It displays all mounted filesystems along with information about each.
+
+## The terminal as file
+
+- The Linux system has an additional type of file, a _device file_. A device file resides in the Linux file structure, usually in the `/dev` directory, and representes a peripheral device such as a terminal, printer or disk drive.
+
+- The command `tty` displays the name of the terminal you give the command from.
