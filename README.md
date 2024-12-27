@@ -377,3 +377,26 @@ Note: You don’t need to specify the directory name while separating a tar file
 - You can use the `tee` utility in a pipe to send the output of a command to a file while also sending the output to standard output.
 
 - `who | tee who.out | grep scott`
+
+## Running a program in the background
+
+- Running a command in the background can be useful if the command will be running for a long time and does not need supervision.
+
+- To run a command in the background, type an ampersand (`&`) just before the `RETURN` that ends the command line.
+
+- The shell assigns a small number to the job called a _job number_ and displays it between brackets. Following the job number, the shell displays the _process identification_ (PID) number.
+
+- Example:
+
+```txt
+root@500cb9f8dd75:/# ls -l > file-list.txt &
+[1] 67
+[1]+  Done                    ls --color=auto -l > file-list.txt
+root@500cb9f8dd75:/# 
+```
+
+- The interrupt key (usually `Ctrl + C`) cannot abort a process you are running in the background; you must use `kill` utility for this purpose. Folow `kill` on the command line with either the PID number of the process you want to abort or a percent sign (`%`) followed by the job number.
+
+- If you forget the PID number, you can use `ps` (process status) utility to display it.
+
+- If you forget the job number, you can use the `jobs` builtin to determine the job number of the background job.
