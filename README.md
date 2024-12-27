@@ -378,6 +378,14 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - `who | tee who.out | grep scott`
 
+## `tr`
+
+- Maps one string of characters into another
+
+- Example: Translate all occurrences of characters `[` and `{` to `(`, and all ocurrences of `]` and `}` to `)`
+
+- `tr [{]} (()) < filename`
+
 ## Running a program in the background
 
 - Running a command in the background can be useful if the command will be running for a long time and does not need supervision.
