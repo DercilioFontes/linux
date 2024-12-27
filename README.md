@@ -446,3 +446,26 @@ root@500cb9f8dd75:/#
 - A hyphen defines a range of characters.
 
 - `cat page[6-9].txt` --> `page6.txt`, `page7.txt`, `page8.txt` and `page9.txt`
+
+## Networking and the Internet
+
+- People generally find it easier to work with symbolic names rather than numbers, and Linux systems privide several ways to associate hostnames with IP addresses. The oldest method is to consult a list of name and addresses that are stored in the `/etc/hosts` file.
+
+```txt
+root@500cb9f8dd75:/# cat etc/hosts
+127.0.0.1       localhost
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+172.17.0.2      500cb9f8dd75
+```
+
+- The address `127.0.0.1` is reserved for special hostname `localhost`, which serves as a hook for the system's networking software to operate on the local machine without actually going out onto a physical network.
+
+- Using a regular text file for theses name-to-address mappings proved to be inefficient and incovenient, as more hosts joined the networks and the file grew ever larger and impossible to keep up top date. The most popular solution today is for systems to subscribe to the Domain Name Service (DNS). It effectly addresses the efficiency and update issues.
+
+- A common convention for the format of network addresses: `user@host` (often read as _user at host_). When you use an `@` sign in an argument to a command, the utility interprets the text that follows as the name of a remote host computer. When it does not include an `@` sign or hostname, it assumes requesting from a local host.
+
+- To identify the computer you are using, run `hostname`
