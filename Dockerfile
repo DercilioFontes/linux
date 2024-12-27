@@ -2,17 +2,17 @@ FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -y
-RUN apt install unminimize -y
-RUN apt install man -y
-RUN apt install info -y
-RUN apt install joe -y
-RUN apt install less -y
-RUN apt install file -y
-RUN apt install finger -y
-RUN apt install telnet -y
-RUN apt install ftp -y
-RUN apt install iputils-ping -y
+RUN apt-get update -y && apt-get install -y \
+  unminimize \
+  man \
+  info \
+  joe \
+  less \
+  file \
+  finger \
+  telnet \
+  ftp \
+  iputils-ping
 RUN yes | unminimize
 
 WORKDIR /
