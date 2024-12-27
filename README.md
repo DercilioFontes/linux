@@ -401,6 +401,10 @@ root@500cb9f8dd75:/#
 
 - If you forget the job number, you can use the `jobs` builtin to determine the job number of the background job.
 
+- `bg` --> Moves a process to the background
+
+- `fg` --> Moves a process to the foreground
+
 ## Filename generation / pathname expansion
 
 - _metacharacters_ / _wildcards_ --> characters that have a special meaning to the shell.
