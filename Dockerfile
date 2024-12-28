@@ -12,7 +12,8 @@ RUN apt-get update -y && apt-get install -y \
   finger \
   telnet \
   ftp \
-  iputils-ping
+  iputils-ping \
+  vim
 RUN yes | unminimize
 
 WORKDIR /

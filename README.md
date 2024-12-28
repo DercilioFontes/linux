@@ -481,3 +481,65 @@ ff02::2 ip6-allrouters
 ## `ping`
 
 - The `ping` utility sends a particular kind of IP data packet to a remote computer that causes the remote system to send back a reply. This is a quick way to verify that a remote system is available, as well as to check how well the network is operating.
+
+## `vim`
+
+- The tildes (`~`) indicates that the file is empty.
+
+- To leave without saving: `ESCAPE` + type `:q!` + `RETURN`
+
+### Command and Input Modes
+
+- In Command Mode, you can give `vim` commands.
+
+- In Input Mode, `vim` accepts anything you enter as a text and displays it on the screen.
+
+- Press `ESCAPE` to return to Command Mode.
+
+- The colon (`:`) puts `vim` into another mode, _Last Line Mode_.
+
+- There are three types of Input Mode: OPEN, INSERT, and APPEND.
+
+### Entering text
+
+- To put `vim` in Input Mode, press the `i` key.
+
+#### Correcting text as you insert it
+
+- The keys that allow you to back up and correct a shell command line serve the same functions when `vim` is in Input Mode.
+
+- These keys include the erase, line kill and word kill keys (`Ctrl + H`, `Ctrl + U` and `Ctrl + W`)
+
+#### Moving the cursor
+
+- In Command Mode, you can use `RETURN`, `SPACE` and `ARROW` keys to move the cursor.
+
+- Also, `h`, `j`, `k` and `l` (ell) keys to move left, down, up and right, respectively.
+
+#### Deleting text
+
+- In Command Mode, you can delete a single character with `x`, a word with `dw` (delete word) and a line with `dd`
+
+#### The Undo command
+
+- Use `u` (undo)
+
+#### Inserting additional text
+
+- When you want to insert new text within text that you have already entered, move the cursor to where you want to insert a new text.
+
+- Then give the `i` (insert) command to go to Input Mode.
+
+- To enter one or more lines, give the command `o` (open). The `vim` editor opens a blank line, puts the cursor on it, and goes to Input Mode.
+
+#### Correcting text
+
+- A shorthand for the two commands `dw` followed by the `i` command is `cw` (change word). The command `cw` automatically puts `vim` into Input Mode.
+
+### Ending the editing session
+
+- While you are editing, `vim` keeps the edited text in an area called _Work Buffer_.
+
+- When you finishe editing you must write out the contents of the Work Buffer to a disk file so that the edited text is saved and available when you next want it.
+
+- You can use `:wq!` + `RETURN` or `ZZ` (uppercase `Z`s)
