@@ -771,3 +771,39 @@ ff02::2 ip6-allrouters
   - Example: `/\<and\>` (finds the next occurrence of the word `and`)
 
   - `[]` - character class definition. Match any _single_ character located between the brackets. Example: `/dis[ck]` finds `disk` or `disc`
+
+### Substituting one string for another
+
+- `:[address]s/search-string/replacement-string[/option]`
+
+#### `address`
+
+- `:s/and/end` --> If not address, Substitute searches only the current line.
+
+- `:5s/and/end` --> If a single line number, Substitute searches that line.
+
+- `:5,10s/and/end` --> If two line number separated by comma, Substitute searches those lines and between
+
+- `.` --> represents the current line
+
+- `$` --> represents the last kine in the Work Buffer
+
+- `:.,$s/and/end` --> current line through end of the Work Buffer
+
+- `:.,.+10s/and/end` --> current line through tenth following line (eleven lines in all)
+
+#### The search and replacement strings
+
+- Usually a forward slash is used a delimiter, but it can use any character that is not a letter, number, blank or backslash. You must use the same delimiter at the end.
+
+- `search-string` has the same format as the Search Command and can include the same special characters.
+
+- `replacement-string` is the string that replaces the text matched by the `search-string`.
+
+- `&` in the `replacement-string` represents the text that was matched by the `search-string`
+
+#### `option`
+
+- `g` --> a global substitution. Normally, the Substitute command replaces only the first occurrence of any text on a line that matches the `search-string`.
+
+- `c` --> check: This option causes `vim` to ask if you would like to make the change each time it finds the `search-string`. `y`, causes the replacement, `q`, terminates the command, and any other character simply continues the search without making that replacement.
