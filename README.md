@@ -837,3 +837,9 @@ ff02::2 ip6-allrouters
 - `"ayy`, yanks a copy of the current line into the buffer `a`
 
 - If you give the buffer name as lowercase letter, `vim` overwrites teh content. If you use a uppercase letter, `"Ayy`, `vim` appends the newly deleted or yanked text to the end of the buffer.
+
+### The read command
+
+- `:[address]r [filename]`
+
+- It reads a file into the Work Buffer. It is positioned following the single address you specify (or current line if you do not specify an address).
