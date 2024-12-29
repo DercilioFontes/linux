@@ -807,3 +807,11 @@ ff02::2 ip6-allrouters
 - `g` --> a global substitution. Normally, the Substitute command replaces only the first occurrence of any text on a line that matches the `search-string`.
 
 - `c` --> check: This option causes `vim` to ask if you would like to make the change each time it finds the `search-string`. `y`, causes the replacement, `q`, terminates the command, and any other character simply continues the search without making that replacement.
+
+### Miscellaneous commands
+
+- Join (`J`) --> joins two lines of text, the line below the current line to the end of the current line. It inserts a space between them.
+
+- Status (`Ctrl + G`) --> displays status info about the file and changes.
+
+- `.` (period) --> repeats the most recent command that made a change. Example: search for a word and make a change you want (use `cw`). You can use `n` to search for next occurrence of the word and `.` to make the same change to it. If you do not want to make the change, use `n` again.
