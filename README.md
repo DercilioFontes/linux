@@ -713,3 +713,33 @@ ff02::2 ip6-allrouters
 - `dG` --> deletes through end of Work Buffer
 
 - `d1G` --> deletes through beginning of Work Buffer
+
+### The change command
+
+- `c` --> replaces existing text with new text. The new text does not have to occupy the same space.
+
+- Pressing `ESCAPE` without entering new text has the effect of deleting.
+
+- `cw` --> changes to end of word
+
+- `cb` --> changes to beginning of word
+
+- `cW` --> changes to end of blank-delimited word
+
+- `cB` --> changes to beginning of blank-delimited word
+
+- `c)` --> changes to end of sentence
+
+- `c(` --> changes to beginning of sentence
+
+- `c}` --> changes to end of paragraph
+
+- `c{` --> changes to beginning of paragraph
+
+- `ct<char>` --> changes from the current cursor position up to a specific character.
+
+- `C` --> changes to end of line
+
+- `cc` --> changes the current line
+
+- `<n>cc` --> changes n lines starting with the current line
