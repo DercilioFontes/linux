@@ -609,3 +609,25 @@ ff02::2 ip6-allrouters
 - `(` --> moves backward to the beginning of the previous sentence.
 
 - `{` --> move backward to the beginning of the previous paragraph.
+
+### Moving the cursor within the screen
+
+- `H` --> moves the cursor at the left end of the top line of the screen.
+
+- `M` --> moves to the middle of the screen.
+
+- `L` --> moves to the lower bottom line.
+
+### Viewing different parts of the Work Buffer
+
+- `Ctrl + F` --> Scroll forward
+
+- `Ctrl + D` --> Scroll down half screen
+
+- `Ctrl + B` --> Scroll backward
+
+- `Ctrl + U` --> Scroll up half screen
+
+- `<n>G` --> goes to line number `n`
+
+- `G` --> goes to last line
