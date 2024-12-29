@@ -36,13 +36,13 @@
 
 - Use `Ctrl + KH` for help
 
-- Use `Ctrl + T + SPACE` to toogle between `I`nsert or `O`vertype mode
+- Use `Ctrl + T + SPACE` to toggle between `I`nsert or `O`vertype mode
 
 - Use `Ctrl + Shift + -` to undo
 
 - Use `Ctrl + K + X` to save and exit
 
-- Use `Ctrl + C` and cofirm with `y` to exit without saving
+- Use `Ctrl + C` and confirm with `y` to exit without saving
 
 ## `cat`, `less` and `more`
 
@@ -116,7 +116,7 @@
 
 - `uniq <filename>`
 
-- It display a file, skkiping adjacent duplicate lines.
+- It display a file, skipping adjacent duplicate lines.
 
 - `sort <filename> | uniq` --> Sorted before processed by `uniq`, ensures that no two lines are the same.
 
@@ -242,7 +242,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - If you need to delete a directory with files in it, first delete the files using `rm` and then delete the directory.
 
-- `rm -r <directory>` --> recursively deletes the files (and other subdirectories) whithin a directory and also deletes teh directory itself.
+- `rm -r <directory>` --> recursively deletes the files (and other subdirectories) within a directory and also deletes teh directory itself.
 
 - **Caution**: You must use it carefully. It is quite easy to wipe out your home directory with a single, short command.
 
@@ -282,7 +282,7 @@ Note: You don’t need to specify the directory name while separating a tar file
   - a member of a group to which the owner belongs (_group_)
   - everyone else (_other_)
 
-- A user can attempt to access a ordinany file in three ways, by trying to:
+- A user can attempt to access a ordinary file in three ways, by trying to:
 
   - _read from_
   - _write to_
@@ -314,7 +314,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - `ln` (link): creates an additional link to an existing file.
 
-- `ln exisiting-file new-link`
+- `ln existing-file new-link`
 
 - The `ln` utility creates am additional pointer to an existing file. It does not make another copy of the file. The file status information is the same for all links. Only the filenames differ.
 
@@ -324,7 +324,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 ## The terminal as file
 
-- The Linux system has an additional type of file, a _device file_. A device file resides in the Linux file structure, usually in the `/dev` directory, and representes a peripheral device such as a terminal, printer or disk drive.
+- The Linux system has an additional type of file, a _device file_. A device file resides in the Linux file structure, usually in the `/dev` directory, and represents a peripheral device such as a terminal, printer or disk drive.
 
 - The command `tty` displays the name of the terminal you give the command from.
 
@@ -342,7 +342,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - It instructs the shell to redirect a command's input from the specific file instead of the terminal.
 
-- Note: A feature called `noclobber` (in `bash`), `NO_CLOBBER` (in `zsh`), stops you from inadvertenlty orverwriting an existing file using redirection.
+- Note: A feature called `noclobber` (in `bash`), `NO_CLOBBER` (in `zsh`), stops you from inadvertently overwriting an existing file using redirection.
 
 ## Appending starndard output to a file (`>>`)
 
@@ -384,7 +384,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - Maps one string of characters into another
 
-- Example: Translate all occurrences of characters `[` and `{` to `(`, and all ocurrences of `]` and `}` to `)`
+- Example: Translate all occurrences of characters `[` and `{` to `(`, and all occurrences of `]` and `}` to `)`
 
 - `tr [{]} (()) < filename`
 
@@ -405,7 +405,7 @@ root@500cb9f8dd75:/# ls -l > file-list.txt &
 root@500cb9f8dd75:/# 
 ```
 
-- The interrupt key (usually `Ctrl + C`) cannot abort a process you are running in the background; you must use `kill` utility for this purpose. Folow `kill` on the command line with either the PID number of the process you want to abort or a percent sign (`%`) followed by the job number.
+- The interrupt key (usually `Ctrl + C`) cannot abort a process you are running in the background; you must use `kill` utility for this purpose. Follow `kill` on the command line with either the PID number of the process you want to abort or a percent sign (`%`) followed by the job number.
 
 - If you forget the PID number, you can use `ps` (process status) utility to display it.
 
@@ -421,7 +421,7 @@ root@500cb9f8dd75:/#
 
 - When one of these special characters appears in an argument on the command line, the shell expands that argument into a list of filenames and passes the list to the program that the command line calls.
 
-- Filenames that contain these special caharacters are called _ambiguous file references_ because they do not refer to any one specific file.
+- Filenames that contain these special characters are called _ambiguous file references_ because they do not refer to any one specific file.
 
 - The process that the shell performs on these filenames is called _pathname expansion_ or _globbing_.
 
@@ -451,7 +451,7 @@ root@500cb9f8dd75:/#
 
 ## Networking and the Internet
 
-- People generally find it easier to work with symbolic names rather than numbers, and Linux systems privide several ways to associate hostnames with IP addresses. The oldest method is to consult a list of name and addresses that are stored in the `/etc/hosts` file.
+- People generally find it easier to work with symbolic names rather than numbers, and Linux systems provide several ways to associate hostnames with IP addresses. The oldest method is to consult a list of name and addresses that are stored in the `/etc/hosts` file.
 
 ```txt
 root@500cb9f8dd75:/# cat etc/hosts
@@ -466,7 +466,7 @@ ff02::2 ip6-allrouters
 
 - The address `127.0.0.1` is reserved for special hostname `localhost`, which serves as a hook for the system's networking software to operate on the local machine without actually going out onto a physical network.
 
-- Using a regular text file for theses name-to-address mappings proved to be inefficient and incovenient, as more hosts joined the networks and the file grew ever larger and impossible to keep up top date. The most popular solution today is for systems to subscribe to the Domain Name Service (DNS). It effectly addresses the efficiency and update issues.
+- Using a regular text file for theses name-to-address mappings proved to be inefficient and inconvenient, as more hosts joined the networks and the file grew ever larger and impossible to keep up top date. The most popular solution today is for systems to subscribe to the Domain Name Service (DNS). It erectly addresses the efficiency and update issues.
 
 - A common convention for the format of network addresses: `user@host` (often read as _user at host_). When you use an `@` sign in an argument to a command, the utility interprets the text that follows as the name of a remote host computer. When it does not include an `@` sign or hostname, it assumes requesting from a local host.
 
@@ -482,7 +482,7 @@ ff02::2 ip6-allrouters
 
 - The `ping` utility sends a particular kind of IP data packet to a remote computer that causes the remote system to send back a reply. This is a quick way to verify that a remote system is available, as well as to check how well the network is operating.
 
-## `vim`
+## `vim` (`vi`)
 
 - The tildes (`~`) indicates that the file is empty.
 
@@ -540,6 +540,72 @@ ff02::2 ip6-allrouters
 
 - While you are editing, `vim` keeps the edited text in an area called _Work Buffer_.
 
-- When you finishe editing you must write out the contents of the Work Buffer to a disk file so that the edited text is saved and available when you next want it.
+- When you finish editing you must write out the contents of the Work Buffer to a disk file so that the edited text is saved and available when you next want it.
 
 - You can use `:wq!` + `RETURN` or `ZZ` (uppercase `Z`s)
+
+### `view`
+
+- If yu want to use `vim` editor to look at a file but not change it, you can use the `view` utility.
+
+- It calls `vim` editor with the -R (read-only) option.
+
+### `:w filename`
+
+- To name the file and write it to the disk.
+
+### `!`
+
+- The exclamation point is necessary only when you have made changes since the last time you wrote the Work Buffer to disk.
+
+### Recovering text after a crash
+
+- `vim -r filename`
+
+- If your work was saved, you will be editing a recent copy of your Work Buffer.
+
+### Moving the cursor by characters
+
+- `<n>SPACE` or `<n>l` or `<n>->` --> moves the cursor n characters to the right
+
+- `<n>BACKSPACE` or `<n>h` or `<n><-` --> moves the cursor n characters to the left
+
+### Moving the cursor to a specific character
+
+- `fa` --> moves the cursor to the next occurrence of `a`
+
+- `Fa` --> moves the cursor to the previous occurrence of `a`
+
+- `;` --> repeats the last Find command
+
+### Moving the cursor by words
+
+- `w` --> moves the cursor forward to the first letter of the next word.
+
+- `W` --> moves forward by blank-delimited words, skips punctuation.
+
+- `b` --> moves the cursor backward to the first letter of the previous word.
+
+- `B` --> moves backward by blank-delimited words, skips punctuation.
+
+- `<n>w` or `<n>b` --> moves a specific number of words
+
+### Moving the cursor by lines
+
+- `RETURN` --> moves the cursor to the beginning of the next line.
+
+- `j` or `DOWN ARROW` --> moves it down one line to the character just below the current character.
+
+- `k` or `UP ARROW` --> similar to before but in the opposite direction.
+
+- `-` --> similar to `RETURN` but also in the opposite direction.
+
+### Moving the cursor by sentences and paragraphs
+
+- `)` --> moves forward to the beginning of the next sentence.
+
+- `}` --> move forward to the beginning of the next paragraph.
+
+- `(` --> moves backward to the beginning of the previous sentence.
+
+- `{` --> move backward to the beginning of the previous paragraph.
