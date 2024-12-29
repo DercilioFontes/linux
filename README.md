@@ -564,6 +564,10 @@ ff02::2 ip6-allrouters
 
 - If your work was saved, you will be editing a recent copy of your Work Buffer.
 
+### Repeat Factor
+
+- A _Repeat Factor_ (n) before a command specifies the number of times a command is performed.
+
 ### Moving the cursor by characters
 
 - `<n>SPACE` or `<n>l` or `<n>->` --> moves the cursor n characters to the right
@@ -658,8 +662,54 @@ ff02::2 ip6-allrouters
 
 - `R` --> causes _all_ subsequent characters to overwrite exiting text, until you press `ESCAPE` key
 
-### The Quote command
+### The quote command
 
 - `Ctrl + V` while in Input Mode to enter character that have special meaning to `vim`
 
 - It quotes only the single character that follows it.
+
+### The undo command
+
+- `u` --> undoes what you just did.
+
+- `U` --> restores the current line to the way it was before you started changing it, even after several changes.
+
+### The delete character command
+
+- `x` --> deletes the current character.
+
+- `<n>x` --> deletes several characters on the current line.
+
+### The delete command
+
+- `d` --> removes text from the Work Buffer. `d` + `RETURN` deletes two lines: the current line and the following one.
+
+- The amount of text that `d` removes depends on the Repeat Factor (`<n>d`) and the Unit of Measure, `dw` (delete word) or `dd` (delete line), you enter.
+
+- `dt<char>` --> deletes from the current cursor position up to a specific character.
+
+- `D` --> deletes the remainder of the current line.
+
+- `d0` --> deletes to beginning of line
+
+- `db` --> deletes to beginning of word
+
+- `dW` --> deletes to end of blank-delimited word
+
+- `dB` --> deletes to beginning of blank-delimited word
+
+- `d)` --> deletes to end of sentence
+
+- `d(` --> deletes to beginning of sentence
+
+- `d}` --> deletes to end of paragraph
+
+- `d{` --> deletes to beginning of paragraph
+
+- `dL` --> deletes through last line on screen
+
+- `dH` --> deletes through first line on screen
+
+- `dG` --> deletes through end of Work Buffer
+
+- `d1G` --> deletes through beginning of Work Buffer
