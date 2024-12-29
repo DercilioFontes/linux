@@ -825,3 +825,15 @@ ff02::2 ip6-allrouters
 - If you delete (`d`) or yank (`y`) characters or words, `P` inserts them before the current character, and `p` after.
 
 - If you delete (`d`) or yank (`y`) lines, sentences or paragraphs, `P` inserts them before the current line, and `p` after.
+
+### The Named Buffers
+
+- You can use a Named Buffer with any of the Delete, Yank, or Put commands.
+
+- There are 26 Named Buffers, each named by a letter of the alphabet.
+
+- To store text to or retrieve text from a Named Buffer, use double quotation mark (`"`) and a buffer name.
+
+- `"ayy`, yanks a copy of the current line into the buffer `a`
+
+- If you give the buffer name as lowercase letter, `vim` overwrites teh content. If you use a uppercase letter, `"Ayy`, `vim` appends the newly deleted or yanked text to the end of the buffer.
