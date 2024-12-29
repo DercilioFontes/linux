@@ -743,3 +743,31 @@ ff02::2 ip6-allrouters
 - `cc` --> changes the current line
 
 - `<n>cc` --> changes n lines starting with the current line
+
+### The search commands
+
+- `/<text>` - find the next occurrence of a string (forward)
+
+- `?<text>` - find the previous occurrence of a string (backward)
+
+- If you need to search for a text with `/` or `?`, you can scape/quote with a `\`
+
+- `N` and `n` repeats the last search. `n` repeat the original search exactly, and `N` in the opposite direction.
+
+- `vim` wraps around from the end of the text to the beginning if searching forward and vice-versa if searching backward.
+
+- The search string is a regular expression:
+
+  - `^` - beginning-of-line indicator
+
+  - `$` - end-of-line indicator
+
+  - `.` - any-character indicator. To search for an actual period, use `\.`
+
+  - `\>` - end-of-word indicator. Example: `/s\>` (finds the next word that ends with an `s`)
+
+  - `\<` - beginning-of-word indicator. Example: `/\<The` (finds the next word that starts with an `The`)
+
+  - Example: `/\<and\>` (finds the next occurrence of the word `and`)
+
+  - `[]` - character class definition. Match any _single_ character located between the brackets. Example: `/dis[ck]` finds `disk` or `disc`
