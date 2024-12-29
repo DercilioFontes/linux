@@ -631,3 +631,35 @@ ff02::2 ip6-allrouters
 - `<n>G` --> goes to line number `n`
 
 - `G` --> goes to last line
+
+### The insert commands
+
+- `i` --> puts `vim` in Input Mode and places the text you enter _before_ the character the cursor is on.
+
+- `I` --> places the text at the beginning of the current line.
+
+### The append commands
+
+- `a` --> places the text you enter _after_ the character the cursor is on.
+
+- `A` --> places the text at the end of the current line.
+
+### The open commands
+
+- `o` --> opens a blank line _below_ the current line and places the cursor at the beginning of the new line.
+
+- `O` --> open a blank line _above_ the current line.
+
+### The replace commands
+
+- Cause the new text you enter to overwrite (replace) existing text.
+
+- `r` --> replaces only the current character with the one that you enter, and automatically returns to Command Mode. You don't need to press `ESCAPE` key.
+
+- `R` --> causes _all_ subsequent characters to overwrite exiting text, until you press `ESCAPE` key
+
+### The Quote command
+
+- `Ctrl + V` while in Input Mode to enter character that have special meaning to `vim`
+
+- It quotes only the single character that follows it.
