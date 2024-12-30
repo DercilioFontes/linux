@@ -843,3 +843,11 @@ ff02::2 ip6-allrouters
 - `:[address]r [filename]`
 
 - It reads a file into the Work Buffer. It is positioned following the single address you specify (or current line if you do not specify an address).
+
+### The write command
+
+- `:[address]w[!] [filename]`
+
+- `:[address]w >> filename`
+
+- `w!` --> The exclamation point is a safeguard against accidentally overwriting a file. The only times you do not need an exclamation point are when you are writing out the entire contents of the Work Buffer to the file being edited and when you are writing part or all of the Work Buffer to a new file. When you are writing part of the file to the file being edited, or when you are overwriting another file, you must use and exclamation point.˝
