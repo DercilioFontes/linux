@@ -816,6 +816,8 @@ ff02::2 ip6-allrouters
 
 - `.` (period) --> repeats the most recent command that made a change. Example: search for a word and make a change you want (use `cw`). You can use `n` to search for next occurrence of the word and `.` to make the same change to it. If you do not want to make the change, use `n` again.
 
+- `~` --> Changes uppercase to lowercase and vice versa
+
 ### The Yank and Put commands
 
 - The Yank command (`y`) is identical to the Delete (`d`) command, except that Yank does not delete text from the Work Buffer. The `vim` editor places a _copy_ of the yanked text in the General-Purpose Buffer, so that you can use the Put command to place another copy of it elsewhere in the Work Buffer.
