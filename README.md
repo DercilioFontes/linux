@@ -260,7 +260,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - `bash` --> `.profile`
 
-- `zsh` --> `zprifile`
+- `zsh` --> `.zprofile`
 
 ## `cd` (change directory)
 
@@ -344,7 +344,7 @@ Note: You don’t need to specify the directory name while separating a tar file
 
 - Note: A feature called `noclobber` (in `bash`), `NO_CLOBBER` (in `zsh`), stops you from inadvertently overwriting an existing file using redirection.
 
-## Appending starndard output to a file (`>>`)
+## Appending standard output to a file (`>>`)
 
 - `cat pear >> orange`
 
@@ -873,3 +873,21 @@ ff02::2 ip6-allrouters
 - You can execute a command from `vim` with standard input to the command coming from all or part of the file you are editing and standard output from the command replacing the input in the file you are editing.
 
 - Example: Sort a list in place in a file you are working on. Move the cursor to the beginning of the list and set a marker `m<char>`. Then move the cursor to the end of the list and give the command `!'qsort` + `RETURN`.
+
+## bash (The Bourne Again Shell)
+
+- It is both a command interpreter and a high-level programming language.
+
+### Shell scripts
+
+- A _shell script_ is a file that contains commands that can be executed by the shell.
+
+- When a shell file is created, the shell does not recognize it as a executable file and issues an error message when you try to execute it.
+
+- You can execute it by giving the filename as an argument to `bash` (`bash filename`). In this case `bash` is executable and the file is an argument that `bash` executes, so you do not need to have permission to execute the file.
+
+- The `chmod` gives execute permission:
+
+  - `chmod u+x filename`
+
+  - Add (`+`) execute permission (`x`) for the owner (`u` - user)
