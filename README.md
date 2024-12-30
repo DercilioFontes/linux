@@ -56,7 +56,7 @@
 
 ## Quoting/Scaping characters
 
-- To quote, or scape, a character precede it with a backslash (`\`)
+- To quote, or escape, a character precede it with a backslash (`\`)
 
 - Another way is to enclose them between single quotation marks (`'**'`)
 
@@ -750,7 +750,7 @@ ff02::2 ip6-allrouters
 
 - `?<text>` - find the previous occurrence of a string (backward)
 
-- If you need to search for a text with `/` or `?`, you can scape/quote with a `\`
+- If you need to search for a text with `/` or `?`, you can escape/quote with a `\`
 
 - `N` and `n` repeats the last search. `n` repeat the original search exactly, and `N` in the opposite direction.
 
@@ -891,3 +891,15 @@ ff02::2 ip6-allrouters
   - `chmod u+x filename`
 
   - Add (`+`) execute permission (`x`) for the owner (`u` - user)
+
+### Command separation and grouping
+
+- The `NEWLINE` character is a unique command separator because it initiates execution of the command preceding it. It is the `RETURN` at the end of a command line.
+
+- The semicolon (`;`) is a command separator that _does not_ initiate execution of a command and _does not_ change any aspect of how the command functions. You can execute a series of commands sequentially by entering them on a single command line. Example: `a; b; c`.
+
+- The backslash (`\`) allow to continue the command on the next line. It quotes, or escapes, the `NEWLINE` that follows it so that the shell does not treat it as the command terminator.
+
+- The pipe symbol (`|`) works as already described.
+
+- The background task symbol (`&`) causes the shell to execute in the background. `d & e & f` executes tasks `d` and `e` in the background and task `f` in the foreground.
