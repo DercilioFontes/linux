@@ -851,3 +851,13 @@ ff02::2 ip6-allrouters
 - `:[address]w >> filename`
 
 - `w!` --> The exclamation point is a safeguard against accidentally overwriting a file. The only times you do not need an exclamation point are when you are writing out the entire contents of the Work Buffer to the file being edited and when you are writing part or all of the Work Buffer to a new file. When you are writing part of the file to the file being edited, or when you are overwriting another file, you must use and exclamation point.˝
+
+### Editing other files
+
+- `:e[!] [filename]`
+
+- If you want to save the contents of the Work Buffer, you must write it out (`:w`) before you give this command.
+
+- If you do not want to save, you need to use an exclamation point to show that you know that you will lose the work.
+
+- If you do not supply a filename, `vim` edits the same file you are currently working on. You can give the command `:e!` to start an editing session over again.
