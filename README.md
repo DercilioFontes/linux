@@ -861,3 +861,13 @@ ff02::2 ip6-allrouters
 - If you do not want to save, you need to use an exclamation point to show that you know that you will lose the work.
 
 - If you do not supply a filename, `vim` edits the same file you are currently working on. You can give the command `:e!` to start an editing session over again.
+
+### Executing shell command from `vim`
+
+- `:sh` --> use carefully. Use `exit` to go back to `vim`
+
+- `!!<command>` --> You can execute a command and have it replace the current line with the output. If you do not want to replace any text, put the cursor on a blank line.
+
+- You can execute a command from `vim` with standard input to the command coming from all or part of the file you are editing and standard output from the command replacing the input in the file you are editing.
+
+- Example: Sort a list in place in a file you are working on. Move the cursor to the beginning of the list and set a marker `m<char>`. Then move the cursor to the end of the list and give the command `!'qsort` + `RETURN`.
