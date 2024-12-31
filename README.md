@@ -911,3 +911,19 @@ ff02::2 ip6-allrouters
 - The shell creates a copy of itself, called a _subshell_, for each group, treating each group of commands as job and creating a new process to execute each of the commands.
 
 - Each subshell (job) has its own environment - among other things, this means it has its own set of variables with values that can be different for each subshell.
+
+### Redirecting standard error
+
+- When you execute a program, the process running the program opens three _file descriptors_, which are places the program sends its output to and gets its input from: _0 (standard input)_, _1 (standard output)_, and _2 (standard error)_.
+
+- The redirect output symbol (`>`) is shorthand of `1>`, which tells the shell to redirect standard output.
+
+- Similarly, `<` is short for `<0`, which redirects standard input.
+
+- The symbols `2>` redirect standard error.
+
+- The program does not "know" where its input comes from nor where its output goes to; the shell takes care of that.
+
+- `2>&1` declares descriptor 2 (standard error) to be a duplicate of file descriptor 1 (standard output).
+
+- `1>&2` redirects standard output of a command to standard error.
