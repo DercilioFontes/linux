@@ -892,14 +892,22 @@ ff02::2 ip6-allrouters
 
   - Add (`+`) execute permission (`x`) for the owner (`u` - user)
 
-### Command separation and grouping
+### Command separation
 
 - The `NEWLINE` character is a unique command separator because it initiates execution of the command preceding it. It is the `RETURN` at the end of a command line.
 
-- The semicolon (`;`) is a command separator that _does not_ initiate execution of a command and _does not_ change any aspect of how the command functions. You can execute a series of commands sequentially by entering them on a single command line. Example: `a; b; c`.
+- The semicolon (`;`) is a command separator that _does not_ initiate execution of a command and _does not_ change any aspect of how the command functions. You can execute a series of commands sequentially by entering them on a single command line. Example: `a ; b ; c`.
 
 - The backslash (`\`) allow to continue the command on the next line. It quotes, or escapes, the `NEWLINE` that follows it so that the shell does not treat it as the command terminator.
 
 - The pipe symbol (`|`) works as already described.
 
 - The background task symbol (`&`) causes the shell to execute in the background. `d & e & f` executes tasks `d` and `e` in the background and task `f` in the foreground.
+
+### Command grouping
+
+- You can use parentheses to group commands. Example: `(a ; b) & c`
+
+- The shell creates a copy of itself, called a _subshell_, for each group, treating each group of commands as job and creating a new process to execute each of the commands.
+
+- Each subshell (job) has its own environment - among other things, this means it has its own set of variables with values that can be different for each subshell.
