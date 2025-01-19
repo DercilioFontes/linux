@@ -953,3 +953,21 @@ ff02::2 ip6-allrouters
 - To access another directory in the stack, call `pushd` with a numeric argument preceded by a plus sign (`pushd +2`). The directories in the stack are numbered starting with the top directory, which is number 0.
 
 - To remove a directory from the stack, use the `popd` (*pop d*irectory) builtin. Without an argument, the top directory is removed. To remove another directory than the top, use `popd` with a numeric argument (`popd +1`).
+
+### Processes
+
+- A _process_ is the execution of a command by Linux. The shell that starts up is a process. Whenever you give the name of a Linux utility on the command line, a process is initiated. A process is not started when you run a shell builtin such as `cd` from the command line or within a script.
+
+- Linux assigns a unique process identification (PID) number at the inception of each process.
+
+- Like the file structure, the process structure is hierarchical. It has parents, children, and even a _root_. A parent process _forks_ (or _spawns_) a child process, which in turn can fork other processes.
+
+- _Fork_ is the name of an operating system routine, or _system call_, that creates a new process.
+
+- `init` is the first process that holds the same position in the the process structure as the root directory. It is the ancestor of all processes. If there are terminals attached to the system, it forks a _getty_ process for each terminal, that waits until a user starts to log in. The action of logging in transforms the _getty_ process into a _login_ process, and finally into the user's shell process.
+
+- While a child process is executing, the parent process _sleeps_. While a process is sleeping, it does not use any computer time. When the child process finishes, it dies. The parent process wakes up.
+
+- When you request that the shell run a process in the background by ending a command with an ampersand (`&`), the shell forks a child process without going to sleep and without waiting for the child process to run to completion.
+
+- Within a given process you can declare, initialize, read, and change variables. By default however, a variable is local to a process. When a process forks a child process, the parent process does not automatically pass the value of a variable to the child. You can make the value of a variable available to child processes by using the `export` builtin.
