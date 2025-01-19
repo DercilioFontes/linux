@@ -927,3 +927,15 @@ ff02::2 ip6-allrouters
 - `2>&1` declares descriptor 2 (standard error) to be a duplicate of file descriptor 1 (standard output).
 
 - `1>&2` redirects standard output of a command to standard error.
+
+### Job control
+
+- The `jobs` builtin lists all background jobs.
+
+- To move a background job into the foreground, use `fg` builtin with a percent sign (`%`) followed by the job number (`fg %2`). You can also refer to a job by following the percent sign with a sting that uniquely identifies the beginning of the command line used to start the job. If you follow the percent line with a question mark and a string, the string matches itself anywhere on the command line.
+
+- To put the current foreground job into the background, `Ctrl + Z` (stops the job) and `Ctrl + Y` (continues to run until it tries to read input from the terminal, at which point it is suspended). Once the job is suspended, use `bg` builtin to resume execution of the job putting it in the background.
+
+- If a background job attempts to read from the terminal, the shell stops it (puts it to sleep) and notifies you. When this happens you must move the job to the foreground.
+
+- If you try to leave a shell while there are stopped jobs, the shell gives you a warning and does not allow you to exit. Jobs that are running (not stopped) in the background continue to run.
