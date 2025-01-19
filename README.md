@@ -939,3 +939,17 @@ ff02::2 ip6-allrouters
 - If a background job attempts to read from the terminal, the shell stops it (puts it to sleep) and notifies you. When this happens you must move the job to the foreground.
 
 - If you try to leave a shell while there are stopped jobs, the shell gives you a warning and does not allow you to exit. Jobs that are running (not stopped) in the background continue to run.
+
+### Directory stack manipulation
+
+- You can store a list of directories you are working with.
+
+- The `dirs` builtin displays the contents of the directory stack.
+
+- To change the directories and, at the same time, add a new directory to the top of the stack, use `pushd` (*push d*irectory) builtin.
+
+- When you use `pushd` without an argument, it swaps the top two directories on the stack.
+
+- To access another directory in the stack, call `pushd` with a numeric argument preceded by a plus sign (`pushd +2`). The directories in the stack are numbered starting with the top directory, which is number 0.
+
+- To remove a directory from the stack, use the `popd` (*pop d*irectory) builtin. Without an argument, the top directory is removed. To remove another directory than the top, use `popd` with a numeric argument (`popd +1`).
