@@ -984,3 +984,5 @@ echo "This is a Bourne Again Shell script."
 ```
 
 - When a new shell is started, certain files with commands in them may be used to initialize the shell. The files accessed depend on whether the shell is a login shell, an interactive shell that is not a login shell, or a noninteractive shell⎯one used to execute shell script.
+![IMG_4669](https://github.com/user-attachments/assets/da8b6755-d578-4ccb-a6c1-36c9c8bc297f)
+
