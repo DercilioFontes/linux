@@ -971,3 +971,7 @@ ff02::2 ip6-allrouters
 - When you request that the shell run a process in the background by ending a command with an ampersand (`&`), the shell forks a child process without going to sleep and without waiting for the child process to run to completion.
 
 - Within a given process you can declare, initialize, read, and change variables. By default however, a variable is local to a process. When a process forks a child process, the parent process does not automatically pass the value of a variable to the child. You can make the value of a variable available to child processes by using the `export` builtin.
+
+- With the exception of the commands that are built into the shell (shell builtins), whenever you give the shell a command on the command line, the shell `fork`s, which creates a duplicate of the shell process (a subshell). The new process attempts to `exec` the command. If the command is an executable program, `exec` succeeds and the system overlays the newly created subshell with the executable program. If the command is a shell script, `exec` fails. When it fails, the command is assumed to be a shell script, and the subshell runs the commands in the script.
+
+- If you want to see how the script runs with different shell, you can give the name of another shell command followed by the name of the file containing the script. For example, to run `zsh` in `fish` shell, `> zsh script`
