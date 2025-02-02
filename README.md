@@ -975,3 +975,12 @@ ff02::2 ip6-allrouters
 - With the exception of the commands that are built into the shell (shell builtins), whenever you give the shell a command on the command line, the shell `fork`s, which creates a duplicate of the shell process (a subshell). The new process attempts to `exec` the command. If the command is an executable program, `exec` succeeds and the system overlays the newly created subshell with the executable program. If the command is a shell script, `exec` fails. When it fails, the command is assumed to be a shell script, and the subshell runs the commands in the script.
 
 - If you want to see how the script runs with different shell, you can give the name of another shell command followed by the name of the file containing the script. For example, to run `zsh` in `fish` shell, `> zsh script`
+
+- You can put a special sequence os characters on the first line of a shell script to indicate to the operating system that it is a script. The OS checks the the initial characters of a program before attempting to `exec` it, theses characters save the system from making an unsuccessful attempt. They also tell the system which utility to use. If the the first two characters of a script are `#!`, the systems interprets the characters that follow as the absolute pathname of the program that should execute the script. This can be the pathname of any program, not just a shell.
+
+```sh
+#!/bin/bash
+echo "This is a Bourne Again Shell script."
+```
+
+- When a new shell is started, certain files with commands in them may be used to initialize the shell. The files accessed depend on whether the shell is a login shell, an interactive shell that is not a login shell, or a noninteractive shell⎯one used to execute shell script.
